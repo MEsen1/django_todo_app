@@ -2,8 +2,9 @@
 <h2>Todo List</h2>
 <ul>
   {% for todo in todos %}
-  <li>{{todo.title}} - {{todo.description}}</li>
-
-  {% endfor %}
+  <a href="{%url 'todo_update' todo.id%}"
+    ><li>{{todo.title}} - {{todo.description}}</li></a
+  >
 </ul>
-{% endblock content %}
+
+{% endfor %} {% endblock content %}
